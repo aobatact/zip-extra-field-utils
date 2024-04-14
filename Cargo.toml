@@ -1,0 +1,15 @@
+[package]
+name = "zip-extra-field-utils"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["zip_crate", "chrono"]
+zip_crate = ["dep:zip"]
+chrono = ["dep:chrono"]
+
+[dependencies]
+zip = { version = "0.6.6", default-features = false, optional = true }
+chrono = { version = "0.4.37", default-features = false, optional = true }
